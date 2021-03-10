@@ -7,13 +7,6 @@ import SearchingData from "../searching/SearchingData";
 
 const Header = ({name, cities, weather, city, saveCity}) => {
     let [citySelection, setCitySelectionMode] = useState(false)
-    /*const onSubmit = (formData) => {
-        saveSearching(formData).then(
-            () => {
-                setCitySelectionMode(false);
-            }
-        );
-    }*/
 
     const saveChanges = () => {
         setCitySelectionMode(false)

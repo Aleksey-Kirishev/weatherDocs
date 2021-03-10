@@ -79,7 +79,6 @@ export const getWeatherData = (city) => async (dispatch) => {
 }
 export const getIcon = (newIcon) => async (dispatch) => {
     let response = await weatherDataAPI.getIcon(newIcon)
-    debugger
     dispatch(setIcon(response))
 }
 

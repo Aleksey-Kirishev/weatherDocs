@@ -22,7 +22,6 @@ class CitySelect extends React.Component{
 
     render() {
         let saveNewCity = (values) => {
-            debugger
             this.props.saveCity(values)
         }
 
