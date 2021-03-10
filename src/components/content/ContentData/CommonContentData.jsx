@@ -10,8 +10,6 @@ class CommonContentData extends React.Component {
             let city = this.props.city;
             if (!city) {city = "Krasnodar"}
             this.props.getWeatherData(city)
-            debugger
-            console.log(`COMMONcontent`)
         }
     }
 

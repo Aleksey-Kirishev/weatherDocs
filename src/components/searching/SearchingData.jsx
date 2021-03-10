@@ -10,7 +10,6 @@ class SearchingData extends React.Component {
         let name = this.props.name;
         if (!city || !name) {city = "Krasnodar"}
         this.props.getWeatherData(city)
-        console.log(`RENDERSEARCHINGDATA`)
     }
 
     render() {

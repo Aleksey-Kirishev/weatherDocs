@@ -6,7 +6,6 @@ import Header from "./Header";
 import {saveValue} from "../../redux/content_reducer";
 
 class HeaderContainer extends Component {
-
     render() {
         return <header>
             <Header name={this.props.name} cities={this.props.cities} weather={this.props.weather} city={this.props.city} saveCity={this.props.saveCity} />

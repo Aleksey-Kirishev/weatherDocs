@@ -6,7 +6,7 @@ import CitySelect from "../CitySelect";
 
 const SearchingDataForm =({cities, saveCity, weather, goToCitySelectionMode, city}) => {
 
-    return <form /*onSubmit={handleSubmit}*/>
+    return <form>
             <div className={s.city}>
                 <CitySelect  cities={cities} saveCity={saveCity} city={city} weather={weather}/>
             </div>

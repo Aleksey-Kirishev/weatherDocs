@@ -12,13 +12,11 @@ class CitySelect extends React.Component{
         let city = this.props.city;
         if (!city) {city = "Krasnodar"}
         this.props.getWeatherData(city)
-        console.log(`RENDERCITYSELECT`)
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.city !== this.props.city) {
             this.props.getWeatherData(this.props.city)
-            console.log(`RENDERCITYSELECT2`)
         }
     }
 
