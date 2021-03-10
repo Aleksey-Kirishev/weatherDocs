@@ -11,7 +11,7 @@ let initialState = {
         {id: "10", value: "Oslo"},
         {id: "11", value: "Sydney"},
         {id: "12", value: "Rome"},
-        {id: "13", value: "Vein"},
+        {id: "13", value: "Braga"},
         {id: "14", value: "Venice"},
         {id: "15", value: "Madrid"},
         {id: "16", value: "Barcelona"},
@@ -26,8 +26,7 @@ let initialState = {
         {id: "25", value: "Minsk"},
         {id: "26", value: "Dublin"},
         {id: "27", value: "Riga"},
-        {id: "28", value: "Praga"},
-        {id: "29", value: "Braga"}
+        {id: "28", value: "Praga"}
         ]
 }
 
