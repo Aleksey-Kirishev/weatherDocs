@@ -1,0 +1,59 @@
+.content {
+    background-color: deepskyblue;
+    grid-area: c;
+    text-align: center;
+}
+.main {
+    margin-top: 180px;
+}
+
+.text {
+    color: teal;
+
+}
+img {
+    width: 35px;
+    height: auto;
+}
+.degreesButtons {
+    margin: 36px;
+    font-size: 12px;
+    float: right;
+}
+
+.degreesButtons button {
+    background-color: deepskyblue;
+    border: 1px solid darkblue;
+    color: darkblue;
+    width: 30px;
+}
+
+.cButton {
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.fButton {
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.temperatura {
+    font-size: 36px;
+    color: teal;
+}
+.description {
+    color: teal;
+    font-size: 25px;
+}
+.celsium {
+    font-size: 25px;
+    color: teal;
+}
+.farengeitum {
+    font-size: 25px;
+    color: teal;
+}
+.F {
+    font-size: 25px;
+    color: white;
+}

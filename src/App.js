@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import ContentContainer from "./components/content/ContentContainer";
+import {BrowserRouter} from "react-router-dom";
+import {Provider} from "react-redux";
+import store from "./redux/reduxStore";
+import HeaderContainer from "./components/header/HeaderContainer";
+import FooterContainer from "./components/footer/FooterContainer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+    render() {
+        return (
+                <div className="app-wrapper">
+                    <HeaderContainer/>
+                    <ContentContainer />
+                    <FooterContainer/>
+                </div>
+        );
+    }
 }
 
-export default App;
+const WeatherApp = () => {
+    return <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </BrowserRouter>
+}
+
+export default WeatherApp;

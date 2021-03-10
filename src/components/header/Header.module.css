@@ -1,0 +1,64 @@
+header {
+    background-color: deepskyblue;
+    grid-area: h;
+}
+
+.city {
+    font-size: 36px;
+    float: left;
+    margin-left: 36px;
+    color: darkblue;
+}
+
+select {
+    margin-left: 35px;
+}
+.buttons{
+    font-size: 10px;
+}
+
+.degreesButtons {
+    margin: 36px;
+    font-size: 12px;
+    float: right;
+}
+
+.degreesButtons button {
+    background-color: deepskyblue;
+    border: 1px solid darkblue;
+    color: darkblue;
+    width: 30px;
+    }
+
+.cButton {
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.fButton {
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+a {
+    text-decoration: none;
+    float: left;
+}
+.firstButton {
+    margin-left: 70px;
+    background-color: deepskyblue;
+    border: 1px solid deepskyblue;
+}
+.secondButton {
+    margin-left: 20px;
+    background-color: deepskyblue;
+    border: 1px solid deepskyblue;
+}
+
+.buttonOk {
+    font-size: 18px;
+    background-color: white;
+    border: 1px solid silver;
+    margin-top: 22px;
+
+}
