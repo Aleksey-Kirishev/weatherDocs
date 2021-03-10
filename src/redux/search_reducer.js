@@ -2,7 +2,7 @@ let initialState = {
     cities:[
         {id: "1", value: "Moscow"},
         {id: "2", value: "Krasnodar"},
-        {id: "3", value: "Saints-Petersburg"},
+        {id: "3", value: "Saint Petersburg"},
         {id: "4", value: "London"},
         {id: "5", value: "Paris"},
         {id: "6", value: "Tokyo"},
