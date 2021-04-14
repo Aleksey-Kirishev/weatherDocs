@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/weatherDocs/static/css/main.377b9e10.chunk.css",
+    "main.js": "/weatherDocs/static/js/main.fd21e66f.chunk.js",
+    "main.js.map": "/weatherDocs/static/js/main.fd21e66f.chunk.js.map",
+    "runtime-main.js": "/weatherDocs/static/js/runtime-main.d2ed9c9e.js",
+    "runtime-main.js.map": "/weatherDocs/static/js/runtime-main.d2ed9c9e.js.map",
+    "static/css/2.015dc0ab.chunk.css": "/weatherDocs/static/css/2.015dc0ab.chunk.css",
+    "static/js/2.5da03077.chunk.js": "/weatherDocs/static/js/2.5da03077.chunk.js",
+    "static/js/2.5da03077.chunk.js.map": "/weatherDocs/static/js/2.5da03077.chunk.js.map",
+    "index.html": "/weatherDocs/index.html",
+    "static/css/2.015dc0ab.chunk.css.map": "/weatherDocs/static/css/2.015dc0ab.chunk.css.map",
+    "static/css/main.377b9e10.chunk.css.map": "/weatherDocs/static/css/main.377b9e10.chunk.css.map",
+    "static/js/2.5da03077.chunk.js.LICENSE.txt": "/weatherDocs/static/js/2.5da03077.chunk.js.LICENSE.txt",
+    "static/media/cursor.9220d032.svg": "/weatherDocs/static/media/cursor.9220d032.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d2ed9c9e.js",
+    "static/css/2.015dc0ab.chunk.css",
+    "static/js/2.5da03077.chunk.js",
+    "static/css/main.377b9e10.chunk.css",
+    "static/js/main.fd21e66f.chunk.js"
+  ]
+}
