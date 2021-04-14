@@ -1,7 +1,14 @@
 .app-wrapper {
-  margin: 0 auto;
+  /*margin: 0 auto;
   display: grid;
   grid-template-rows: 100% 100% 100%;
-  grid-template-columns: 12fr;
-  grid-template-areas:"h" "c" "f";
+  grid-template-columns: 100%;
+  grid-template-areas:"h" "c" "f";*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
 }

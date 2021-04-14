@@ -1,23 +1,30 @@
-import React, {useState} from "react"
-import s from "./Content.module.css"
+import React, {useEffect, useState} from "react"
 import ContentDataC from "./ContentData/ContentDataC";
 import ContentDataF from "./ContentData/ContentDataF";
-import Weather from "./Weather/Weather";
+import {connect} from "react-redux";
+import {getWeatherData, setCMode} from "../../redux/content_reducer";
 
-const Content = (props) => {
+const s = require("./Content.module.css");
 
-    let [cMode, setCMode] = useState(true)
+const Content = ({temp, cMode}) => {
 
-        return <div className={s.content}>
-            {props.weather.map(m =><Weather item={m} key={m.id} />)}
-            {cMode
-            ? <ContentDataC temp={props.temp}  />
-            : <ContentDataF temp={props.temp}  />}
-            <span className={s.degreesButtons}>
-                        <button className={s.cButton} onClick={()=>{setCMode(true)}}>C</button>
-                        <button className={s.fButton} onClick={()=>{setCMode(false)}}>F</button>
-                    </span>
+    return <div className={s.content}>
+        <div className={s.container}>
+            <div className={s.content__wrap}>
+                {cMode
+                    ? <ContentDataC temp={temp}/>
+                    : <ContentDataF temp={temp}/>}
+            </div>
         </div>
-    }
+    </div>
+}
 
-export default Content;
+let MapStateToProps = (state) => {
+    return {
+        temp: state.content.main.temp,
+        cMode: state.content.cMode
+    }
+}
+
+export default connect(MapStateToProps, {getWeatherData})(Content)
+

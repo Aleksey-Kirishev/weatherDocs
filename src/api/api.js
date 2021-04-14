@@ -1,4 +1,4 @@
-const ApiKey = "eec2ffbbadb66ea910b3f122d22f5700"
+const ApiKey = "0a90f8435b6dbe50a3d66566d77691a3"
 
 export const weatherDataAPI = {
     getWeatherData (city) {

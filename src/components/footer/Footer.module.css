@@ -1,36 +1,64 @@
 .footer {
-    background-color: deepskyblue;
-    grid-area: f;
+    background-color: #4a8cec;
+    width: 100%;
 }
 
-.wind {
-    margin-left: 100px;
-    float: left;
+.footer__wrap {
+    margin: 20px 0px;
+    height: 95px;
+}
+.container {
+    margin: 0 auto;
+    width: 900px;
+}
+
+@media (min-width: 960px) {
+    .container {
+        width: 900px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        width: 1100px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        width: 1400px;
+    }
+}
+
+.footer__data_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #4a8cec;
     font-size: 16px;
-    color: darkblue;
+    color: white;
 }
 
-.pressure {
-    margin-left: 450px;
-    float: left;
-    font-size: 16px;
-    color: darkblue;
+.data__item {
+    height: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.humidity {
-    margin-left: 450px;
-    float: left;
-    font-size: 16px;
-    color: darkblue;
+.item__title {
+    height: 22px;
+    font-weight: 400;
+    line-height: 22px;
+    opacity: 0.5;
+
+}
+.item__body {
+    height: 42px;
+    font-weight: 700;
+    line-height: 30px;
+    font-size: 25px;
 }
 
-.visibility {
-    margin-left: 450px;
-    float: left;
-    font-size: 16px;
-    color: darkblue;
-}
 
-.dannie {
-    color: teal;
-}

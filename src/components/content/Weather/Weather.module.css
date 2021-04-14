@@ -1,0 +1,28 @@
+.weather__body {
+    display: flex;
+    height: 266px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+.weather__icon img{
+    width: 145px;
+    height: 132px;
+}
+
+.weather__temperatura {
+    line-height: 216px;
+    font-size: 190px;
+    color: white;
+}
+.weather__description {
+    font-size: 25px;
+    color: white;
+}

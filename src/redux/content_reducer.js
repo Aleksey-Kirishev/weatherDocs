@@ -1,11 +1,13 @@
 import {weatherDataAPI} from "../api/api";
+
 const MAIN_REQUEST = "MAIN_REQUEST"
 const WEATHER_REQUEST = "WEATHER_REQUEST"
 const WIND_REQUEST = "WIND_REQUEST"
-const SAVE_VALUE ="SAVE_VALUE"
-const NAME_REQUEST ="NAME_REQUEST"
-const VISIBILITY_REQUEST ="VISIBILITY_REQUEST"
+const SAVE_VALUE = "SAVE_VALUE"
+const NAME_REQUEST = "NAME_REQUEST"
+const VISIBILITY_REQUEST = "VISIBILITY_REQUEST"
 const ICON_REQUEST = "ICON_REQUEST"
+const SET_C_MODE = "SET_C_MODE"
 
 let initialState = {
     main: {
@@ -14,20 +16,21 @@ let initialState = {
         pressure: null,
         feels_like: null
     },
-    weather:[{
+    weather: [{
         id: null,
         main: "",
         description: "",
         icon: ""
     }],
     wind: {
-        speed:null
+        speed: null
     },
     newIcon: null,
     visibility: null,
-    city: "",
+    city: "Krasnodar",
     newCitySelected: "",
-    name: ""
+    name: "Краснодарский край",
+    cMode: true
 }
 
 const contentReducer = (state = initialState, action) => {
@@ -42,15 +45,19 @@ const contentReducer = (state = initialState, action) => {
             return {...state, name: action.name}
         case ICON_REQUEST :
             let body = action.newIcon
-            return {...state, weather:[...state.weather, {icon:body}]}
+            return {...state, weather: [...state.weather, {icon: body}]}
         case VISIBILITY_REQUEST :
             return {...state, visibility: action.visibility}
-        case SAVE_VALUE:{
+        case SET_C_MODE :
+            debugger
+            return {...state, cMode: action.cMode}
+        case SAVE_VALUE: {
             let body = action.newCitySelected
             return {
                 ...state,
                 city: body,
-                newCitySelected: " "}
+                newCitySelected: " "
+            }
         }
         default :
             return state
@@ -60,13 +67,14 @@ const contentReducer = (state = initialState, action) => {
 export default contentReducer
 
 //AC
-export const saveValue = (newCitySelected) => ({type:SAVE_VALUE, newCitySelected})
-export const setMain = (main) => ({type:MAIN_REQUEST, main})
-export const setWeather = (weather) => ({type:WEATHER_REQUEST, weather})
-export const setWind = (wind) => ({type:WIND_REQUEST, wind})
-export const setName = (name) => ({type:NAME_REQUEST, name})
-export const setIcon = (newIcon) => ({type:ICON_REQUEST, newIcon})
-export const setVisibility = (visibility) => ({type:VISIBILITY_REQUEST, visibility})
+export const saveValue = (newCitySelected) => ({type: SAVE_VALUE, newCitySelected})
+export const setMain = (main) => ({type: MAIN_REQUEST, main})
+export const setWeather = (weather) => ({type: WEATHER_REQUEST, weather})
+export const setWind = (wind) => ({type: WIND_REQUEST, wind})
+export const setName = (name) => ({type: NAME_REQUEST, name})
+export const setIcon = (newIcon) => ({type: ICON_REQUEST, newIcon})
+export const setVisibility = (visibility) => ({type: VISIBILITY_REQUEST, visibility})
+export const setCMode = (cMode) => ({type: SET_C_MODE, cMode})
 
 //ThunkC
 export const getWeatherData = (city) => async (dispatch) => {

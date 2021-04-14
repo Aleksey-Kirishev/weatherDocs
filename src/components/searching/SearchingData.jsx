@@ -1,34 +1,31 @@
 import React from "react";
 import {getWeatherData} from "../../redux/content_reducer";
-import s from "../header/Header.module.css";
+import icon from "../../assets/cursor.svg"
 import {connect} from "react-redux";
 
-class SearchingData extends React.Component {
+const s = require("./SearchingData.module.css")
 
-    componentDidMount() {
-        let city = this.props.city;
-        let name = this.props.name;
-        if (!city || !name) {city = "Krasnodar"}
-        this.props.getWeatherData(city)
-    }
-
-    render() {
-        return <div className={s.city}>
-            <span>{this.props.name}</span>
-            <div className={s.buttons}>
-                <button className={s.firstButton} onClick={this.props.goToCitySelectionMode}>Сменить город</button>
-                <button className={s.secondButton} onClick={ () => {this.props.getWeatherData("Krasnodar")}}>Моё местоположение</button>
-            </div>
+function SearchingData(props) {
+    return <div className={s.header__searching}>
+        <div className={s.searching__city}>
+            {props.name}
         </div>
+        <div className={s.searching__buttons}>
+            <button className={s.searching__firstButton} onClick={props.goToCitySelectionMode}>Сменить город</button>
+            <button className={s.searching__secondButton} onClick={() => {
+                props.getWeatherData("Krasnodar")
+            }}><img className={s.searching__img} src={icon}/><span>Моё местоположение</span>
+            </button>
+        </div>
+    </div>
 
-    }
 }
 
 const MapStateToProps = (state) => {
-   return {
-        city:state.content.city,
+    return {
+        city: state.content.city,
         name: state.content.name
-   }
+    }
 }
 
-export default connect (MapStateToProps, {getWeatherData})(SearchingData)
+export default connect(MapStateToProps, {getWeatherData})(SearchingData)

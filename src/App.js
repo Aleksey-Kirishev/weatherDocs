@@ -1,30 +1,27 @@
 import './App.css';
 import React from "react";
-import ContentContainer from "./components/content/ContentContainer";
-import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./redux/reduxStore";
-import HeaderContainer from "./components/header/HeaderContainer";
-import FooterContainer from "./components/footer/FooterContainer";
+import Content from "./components/content/Content";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
 
-class App extends React.Component {
-    render() {
-        return (
-                <div className="app-wrapper">
-                    <HeaderContainer/>
-                    <ContentContainer />
-                    <FooterContainer/>
-                </div>
-        );
-    }
+function App() {
+    return (
+        <div className="app-wrapper">
+            <Header/>
+            <Content/>
+            <Footer/>
+        </div>
+    );
 }
 
 const WeatherApp = () => {
-    return <BrowserRouter basename={process.env.PUBLIC_URL}>
+    return <div>
         <Provider store={store}>
             <App />
         </Provider>
-    </BrowserRouter>
+    </div>
 }
 
 export default WeatherApp;

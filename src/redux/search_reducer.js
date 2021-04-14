@@ -26,7 +26,8 @@ let initialState = {
         {id: "25", value: "Minsk"},
         {id: "26", value: "Dublin"},
         {id: "27", value: "Riga"},
-        {id: "28", value: "Praga"}
+        {id: "28", value: "Praga"},
+        {id: "29", value: "Omsk"}
         ]
 }
 
